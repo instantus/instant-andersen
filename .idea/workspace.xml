@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:instant-andersen" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="" />
+    <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="field Name is now required">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Requests/StoreApiRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Requests/StoreApiRequest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/instant_app/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -19,6 +41,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -128,10 +155,24 @@
       <path value="$PROJECT_DIR$/instant_app/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/instant_app/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/instant_app/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/league/event" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kj8iskuHouzWY2KqSKyrXvF39k" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -150,11 +191,70 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606202770232</updated>
-      <workItem from="1606202771293" duration="2279000" />
+      <workItem from="1606202771293" duration="6681000" />
+      <workItem from="1606214666860" duration="13895000" />
+      <workItem from="1606229764128" duration="3980000" />
+      <workItem from="1606237891809" duration="5398000" />
+      <workItem from="1606291006244" duration="4731000" />
+      <workItem from="1606307478052" duration="2588000" />
     </task>
+    <task id="LOCAL-00001" summary="added user registration using API">
+      <created>1606295286375</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606295286375</updated>
+    </task>
+    <task id="LOCAL-00002" summary="field Name is now required">
+      <created>1606308402423</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606308402423</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added user registration using API" />
+    <MESSAGE value="field Name is now required" />
+    <option name="LAST_COMMIT_MESSAGE" value="field Name is now required" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="627" y="384" width="417" height="165" key="Github.CreateGistDialog" timestamp="1606204588660">
+      <screen x="72" y="27" width="1528" height="873" />
+    </state>
+    <state x="627" y="384" width="417" height="165" key="Github.CreateGistDialog/72.27.1528.873@72.27.1528.873" timestamp="1606204588660" />
+    <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog" timestamp="1606226856386">
+      <screen x="72" y="27" width="1528" height="873" />
+    </state>
+    <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog/72.27.1528.873@72.27.1528.873" timestamp="1606226856386" />
+    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606308412945">
+      <screen x="72" y="27" width="1528" height="873" />
+    </state>
+    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1528.873@72.27.1528.873" timestamp="1606308412945" />
+    <state x="500" y="207" key="run.anything.popup" timestamp="1606229158552">
+      <screen x="72" y="27" width="1528" height="873" />
+    </state>
+    <state x="500" y="207" key="run.anything.popup/72.27.1528.873@72.27.1528.873" timestamp="1606229158552" />
+    <state x="561" y="377" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606204411749">
+      <screen x="72" y="27" width="1528" height="873" />
+    </state>
+    <state x="561" y="377" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1528.873@72.27.1528.873" timestamp="1606204411749" />
   </component>
 </project>
