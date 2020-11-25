@@ -10,14 +10,7 @@ use App\Models\User as User;
 
 class UserController extends Controller
 {
-    public function withValidator($validator)
-    {
-        $validator->after(function ($validator) {
-            $validator->errors()->add('field', 'Something is wrong with this field!');
-        });
-    }
-
-    public function store (StoreApiRequest $request) {
+    public function store(StoreApiRequest $request) {
         $user = new User();
         $user->fill([
             "name" => $request->name,
@@ -25,9 +18,7 @@ class UserController extends Controller
             "password" => bcrypt($request->password)
         ]);
         $user->save();
-        if ($user) {
-            $token = $user->createToken('AuthToken')->accessToken;
-            return response(["token" => $token], 201);
-        }
+        $token = $user->createToken('AuthToken')->accessToken;
+        return response(["token" => $token], 201);
     }
 }

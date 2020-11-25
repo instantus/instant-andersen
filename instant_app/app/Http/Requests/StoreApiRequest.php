@@ -33,8 +33,4 @@ class StoreApiRequest extends FormRequest
             'password_confirmation' => 'required|min:8|max:30|same:password',
         ];
     }
-
-    protected function failedValidation(Validator $validator) {
-        throw new HttpResponseException(response()->json($validator->errors(), JsonResponse::HTTP_UNPROCESSABLE_ENTITY));
-    }
 }
