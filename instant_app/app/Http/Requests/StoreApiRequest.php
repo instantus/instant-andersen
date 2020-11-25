@@ -27,6 +27,7 @@ class StoreApiRequest extends FormRequest
     public function rules()
     {
         return [
+            'name' => 'required|min:3|max:30',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8|max:30',
             'password_confirmation' => 'required|min:8|max:30|same:password',

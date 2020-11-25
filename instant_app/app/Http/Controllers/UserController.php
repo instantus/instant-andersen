@@ -20,6 +20,7 @@ class UserController extends Controller
     public function store (StoreApiRequest $request) {
         $user = new User();
         $user->fill([
+            "name" => $request->name,
             "email" => $request->email,
             "password" => bcrypt($request->password)
         ]);
