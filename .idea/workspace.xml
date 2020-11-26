@@ -25,8 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Added small fixes">
+    <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Added 'app/services' folder, test new branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +53,32 @@
     <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dependency-injection" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="auth-registration" />
@@ -205,6 +236,8 @@
       <workItem from="1606291006244" duration="4731000" />
       <workItem from="1606307478052" duration="3517000" />
       <workItem from="1606311046246" duration="249000" />
+      <workItem from="1606375882946" duration="10892000" />
+      <workItem from="1606390451158" duration="7020000" />
     </task>
     <task id="LOCAL-00001" summary="added user registration using API">
       <created>1606295286375</created>
@@ -227,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606310173275</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added 'app/services' folder, test new branch">
+      <created>1606376142834</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606376142835</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,25 +301,34 @@
     <MESSAGE value="added user registration using API" />
     <MESSAGE value="field Name is now required" />
     <MESSAGE value="Added small fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added small fixes" />
+    <MESSAGE value="Added 'app/services' folder, test new branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 'app/services' folder, test new branch" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606397371613">
+      <screen x="72" y="27" width="1528" height="873" />
+    </state>
+    <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1528.873@72.27.1528.873" timestamp="1606397371613" />
     <state x="627" y="384" width="417" height="165" key="Github.CreateGistDialog" timestamp="1606204588660">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="627" y="384" width="417" height="165" key="Github.CreateGistDialog/72.27.1528.873@72.27.1528.873" timestamp="1606204588660" />
-    <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog" timestamp="1606226856386">
+    <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog" timestamp="1606376540255">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
-    <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog/72.27.1528.873@72.27.1528.873" timestamp="1606226856386" />
-    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606310197667">
+    <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog/72.27.1528.873@72.27.1528.873" timestamp="1606376540255" />
+    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606376196974">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
-    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1528.873@72.27.1528.873" timestamp="1606310197667" />
+    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1528.873@72.27.1528.873" timestamp="1606376196974" />
     <state x="617" y="378" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606310731707">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="617" y="378" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1528.873@72.27.1528.873" timestamp="1606310731707" />
+    <state x="549" y="364" width="700" height="266" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606377837629">
+      <screen x="72" y="27" width="1528" height="873" />
+    </state>
+    <state x="549" y="364" width="700" height="266" key="git4idea.remote.GitConfigureRemotesDialog/72.27.1528.873@72.27.1528.873" timestamp="1606377837629" />
     <state x="500" y="207" key="run.anything.popup" timestamp="1606229158552">
       <screen x="72" y="27" width="1528" height="873" />
     </state>

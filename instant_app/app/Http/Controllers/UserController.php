@@ -5,20 +5,25 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller as Controller;
 use App\Http\Requests\StoreApiRequest as StoreApiRequest;
-use App\Models\User as User;
+use App\Services\UserService;
 
 
 class UserController extends Controller
 {
+    protected $userService;
+
+    public function __construct(UserService $userService)
+    {
+        $this->userService = $userService;
+    }
+
     public function store(StoreApiRequest $request) {
-        $user = new User();
-        $user->fill([
-            "name" => $request->name,
-            "email" => $request->email,
-            "password" => bcrypt($request->password)
-        ]);
-        $user->save();
-        $token = $user->createToken('AuthToken')->accessToken;
-        return response(["token" => $token], 201);
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        $this->userService->createUser($data);
+        return response(["token" => $this->userService->token], 201);
     }
 }
