@@ -25,15 +25,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Added UserService, Moved register logic and added unix tests">
+    <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Added Auth method to get User object and tests to it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Requests/StoreApiRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Requests/StoreApiRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Requests/GetUserApiRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Requests/AuthUserApiRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instant_app/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Services/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instant_app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/tests/Feature/RegTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/tests/Feature/RegTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instant_app/tests/Unit/RegTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/tests/Unit/RegTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +244,7 @@
       <workItem from="1606375882946" duration="10892000" />
       <workItem from="1606390451158" duration="12683000" />
       <workItem from="1606462637961" duration="6191000" />
-      <workItem from="1606475727625" duration="4059000" />
+      <workItem from="1606475727625" duration="8781000" />
     </task>
     <task id="LOCAL-00001" summary="added user registration using API">
       <created>1606295286375</created>
@@ -284,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606397565886</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Auth method to get User object and tests to it">
+      <created>1606480321411</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606480321412</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,13 +324,18 @@
     <MESSAGE value="Added small fixes" />
     <MESSAGE value="Added 'app/services' folder, test new branch" />
     <MESSAGE value="Added UserService, Moved register logic and added unix tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added UserService, Moved register logic and added unix tests" />
+    <MESSAGE value="Added Auth method to get User object and tests to it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Auth method to get User object and tests to it" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606478432355">
+    <state x="559" y="118" width="534" height="706" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606481860494">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
-    <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1528.873@72.27.1528.873" timestamp="1606478432355" />
+    <state x="559" y="118" width="534" height="706" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1528.873@72.27.1528.873" timestamp="1606481860494" />
+    <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606481284310">
+      <screen x="72" y="27" width="1528" height="873" />
+    </state>
+    <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1528.873@72.27.1528.873" timestamp="1606481284310" />
     <state x="627" y="384" width="417" height="165" key="Github.CreateGistDialog" timestamp="1606204588660">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
@@ -335,10 +344,10 @@
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog/72.27.1528.873@72.27.1528.873" timestamp="1606478416972" />
-    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606397581743">
+    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606480341311">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
-    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1528.873@72.27.1528.873" timestamp="1606397581743" />
+    <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1528.873@72.27.1528.873" timestamp="1606480341311" />
     <state x="617" y="378" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606401624006">
       <screen x="72" y="27" width="1528" height="873" />
     </state>

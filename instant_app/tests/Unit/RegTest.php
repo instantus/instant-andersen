@@ -29,8 +29,5 @@ class RegTest extends TestCase
         $createdUser = $this->userService->createUser($data);
         $this->assertInstanceOf(User::class, $createdUser, 'Create user: Failed');
         $this->assertDatabaseHas('users', ['email' => 'test@gmail.com']);
-
-        $getUser = $this->userService->getUser($data);
-        $this->assertInstanceOf(User::class, $getUser, 'Get user: Failed');
     }
 }
