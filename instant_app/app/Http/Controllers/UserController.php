@@ -4,8 +4,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller as Controller;
-use App\Http\Requests\StoreApiRequest as StoreApiRequest;
+use App\Http\Requests\AuthUserApiRequest;
+use App\Http\Requests\StoreApiRequest;
 use App\Services\UserService;
+use Illuminate\Support\Facades\Auth;
 
 
 class UserController extends Controller
@@ -23,7 +25,21 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => $request->password,
         ];
-        $this->userService->createUser($data);
-        return response(["token" => $this->userService->token], 201);
+        $user = $this->userService->createUser($data);
+        $token = $user->createToken('AuthToken')->accessToken;
+        return response(["token" => $token], 201);
+    }
+
+    public function authUser(AuthUserApiRequest $request) {
+        $data = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        if (Auth::attempt($data)) {
+            $user = \Auth::user();
+            $token = $user->createToken('AuthToken')->accessToken;
+            return response(["token" => $token], 200);
+        }
+        return response(['error' => 'Wrong email or password'], 422);
     }
 }
