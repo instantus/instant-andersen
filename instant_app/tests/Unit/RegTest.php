@@ -22,12 +22,15 @@ class RegTest extends TestCase
     public function testCreate()
     {
         $data = [
-            'name' => 'fullname',
-            'email' => 'test1233@gmail.com',
-            'password' => '12312312'
+            'name' => 'Full_Name',
+            'email' => 'test@gmail.com',
+            'password' => '12345678'
         ];
         $createdUser = $this->userService->createUser($data);
-        $this->assertInstanceOf(User::class, $createdUser, 'Not match');
-        $this->assertDatabaseHas('users', ['email' => 'test1233@gmail.com']);
+        $this->assertInstanceOf(User::class, $createdUser, 'Create user: Failed');
+        $this->assertDatabaseHas('users', ['email' => 'test@gmail.com']);
+
+        $getUser = $this->userService->getUser($data);
+        $this->assertInstanceOf(User::class, $getUser, 'Get user: Failed');
     }
 }

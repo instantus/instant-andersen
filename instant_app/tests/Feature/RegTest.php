@@ -17,16 +17,24 @@ class RegTest extends TestCase
 
     public function testRegister() {
         $data = [
-            'name' => 'fullname',
-            'email' => 'another2@gmail.com',
-            'password' => '12312312',
-            'password_confirmation' => '12312312'
+            'name' => 'Full_Name',
+            'email' => 'another@gmail.com',
+            'password' => '12345678',
+            'password_confirmation' => '12345678'
+        ];
+        $dataAuth = [
+            'email' => 'another@gmail.com',
+            'password' => '12345678',
         ];
         $headers = [
             'Accept' => 'application/json',
             'Content-Type' => 'application/json'
         ];
-        $response = $this->json('POST', 'api/users', $data, $headers)
+        $this->json('POST', 'api/users', $data, $headers)
+            ->assertStatus(201)
+            ->assertJsonStructure(['token']);
+
+        $this->json('POST', 'api/auth', $dataAuth, $headers)
             ->assertStatus(201)
             ->assertJsonStructure(['token']);
     }
