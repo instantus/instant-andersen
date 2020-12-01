@@ -239,7 +239,7 @@
       <workItem from="1606720822167" duration="5974000" />
       <workItem from="1606749924254" duration="6930000" />
       <workItem from="1606807513882" duration="9898000" />
-      <workItem from="1606821804595" duration="1042000" />
+      <workItem from="1606821804595" duration="2311000" />
     </task>
     <task id="LOCAL-00001" summary="added user registration using API">
       <created>1606295286375</created>
@@ -325,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606822255101</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Small fix">
+      <created>1606823012080</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606823012082</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,10 +397,10 @@
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="486" y="218" width="399" height="156" key="NewPhpFileDialog/72.27.1528.873@72.27.1528.873" timestamp="1606754507025" />
-    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606822270792">
+    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606823023078">
       <screen x="60" y="27" width="1540" height="873" />
     </state>
-    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/60.27.1540.873@60.27.1540.873" timestamp="1606822270792" />
+    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/60.27.1540.873@60.27.1540.873" timestamp="1606823023078" />
     <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1528.873@72.27.1528.873" timestamp="1606816232173" />
     <state x="617" y="378" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606401624006">
       <screen x="72" y="27" width="1528" height="873" />

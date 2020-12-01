@@ -53,10 +53,12 @@ class UserController extends Controller
         $email = $request['email'];
         $user = User::where('email', $email)->first();
         $reset = PasswordReset::where('email', $email)->first();
+
         if ($reset && $reset->created_at->copy()->addHours(2)->isPast()) {
             $reset->delete();
             $reset = false;
         }
+
         if (!$reset) {
             $token = md5($user->id.time().Str::random(64));
             $reset = new PasswordReset();
@@ -67,6 +69,7 @@ class UserController extends Controller
             ]);
             $reset->save();
             Mail::to($email)->send(new \App\Mail\PasswordReset($token));
+
             return response(['response' => 'Check your email to get password reset instructions'], 200);
         }
         return response(['response' => 'Email with instructions has been sent already'], 200);
@@ -75,14 +78,17 @@ class UserController extends Controller
     public function passwordReset(PasswordResetRequest $request) {
         $token = $request['token'];
         $reset = PasswordReset::where('token', $token)->first();
+
         if ($reset->created_at->copy()->addHours(2)->isPast()) {
             $reset->delete();
             return response(['response' => 'Token has expired, please use "Forgot Password" again'], 200);
         }
+
         $user = User::findOrFail($reset->user_id);
         $user->password = bcrypt($request['password']);
         $user->save();
         $reset->delete();
+
         return response(['response' => 'Password was successfully changed'], 200);
     }
 }
