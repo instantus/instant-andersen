@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller as Controller;
 use App\Http\Requests\AuthUserApiRequest;
+use App\Http\Requests\PasswordForgotRequest;
+use App\Http\Requests\PasswordResetRequest;
 use App\Http\Requests\StoreApiRequest;
+use App\Models\PasswordReset;
+use App\Models\User;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 
 class UserController extends Controller
@@ -41,5 +47,42 @@ class UserController extends Controller
             return response(["token" => $token], 200);
         }
         return response(['error' => 'Wrong email or password'], 422);
+    }
+
+    public function passwordForgot(PasswordForgotRequest $request) {
+        $email = $request['email'];
+        $user = User::where('email', $email)->first();
+        $reset = PasswordReset::where('email', $email)->first();
+        if ($reset && $reset->created_at->copy()->addHours(2)->isPast()) {
+            $reset->delete();
+            $reset = false;
+        }
+        if (!$reset) {
+            $token = Str::random(64);
+            $reset = new PasswordReset();
+            $reset->fill([
+                'user_id' => $user->id,
+                'email' => $email,
+                'token' => $token
+            ]);
+            $reset->save();
+            Mail::to($email)->send(new \App\Mail\PasswordReset($token));
+            return response(['response' => 'Check your email to get password reset instructions'], 200);
+        }
+        return response(['response' => 'Email with instructions has been sent already'], 200);
+    }
+
+    public function passwordReset(PasswordResetRequest $request) {
+        $email = $request['email'];
+        $user = User::where('email', $email)->first();
+        $reset = PasswordReset::where('email', $email)->first();
+        if ($reset->created_at->copy()->addHours(2)->isPast()) {
+            $reset->delete();
+            return response(['response' => 'Token has expired, please use "Forgot Password" again'], 200);
+        }
+        $user->password = bcrypt($request['password']);
+        $user->save();
+        $reset->delete();
+        return response(['response' => 'Password was successfully changed'], 200);
     }
 }
