@@ -58,7 +58,7 @@ class UserController extends Controller
             $reset = false;
         }
         if (!$reset) {
-            $token = Str::random(64);
+            $token = Str::random(32);
             $reset = new PasswordReset();
             $reset->fill([
                 'user_id' => $user->id,
@@ -73,13 +73,13 @@ class UserController extends Controller
     }
 
     public function passwordReset(PasswordResetRequest $request) {
-        $email = $request['email'];
-        $user = User::where('email', $email)->first();
-        $reset = PasswordReset::where('email', $email)->first();
+        $token = $request['token'];
+        $reset = PasswordReset::where('token', $token)->first();
         if ($reset->created_at->copy()->addHours(2)->isPast()) {
             $reset->delete();
             return response(['response' => 'Token has expired, please use "Forgot Password" again'], 200);
         }
+        $user = User::findOrFail($reset->user_id);
         $user->password = bcrypt($request['password']);
         $user->save();
         $reset->delete();
