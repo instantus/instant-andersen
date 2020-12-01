@@ -52,7 +52,7 @@ class UserController extends Controller
         $email = $request['email'];
         $user = User::where('email', $email)->first();
         $reset = PasswordReset::where('email', $email)->first();
-        if ($reset && $reset->created_at->copy()->addSeconds(2)->isPast()) {
+        if ($reset && $reset->created_at->copy()->addHours(2)->isPast()) {
             $reset->delete();
             $reset = false;
         }
