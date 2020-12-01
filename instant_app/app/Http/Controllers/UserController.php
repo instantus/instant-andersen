@@ -13,6 +13,7 @@ use App\Models\User;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 
 class UserController extends Controller
@@ -57,7 +58,7 @@ class UserController extends Controller
             $reset = false;
         }
         if (!$reset) {
-            $token = md5($user->id.time());
+            $token = md5($user->id.time().Str::random(64));
             $reset = new PasswordReset();
             $reset->fill([
                 'user_id' => $user->id,
