@@ -13,7 +13,6 @@ use App\Models\User;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Str;
 
 
 class UserController extends Controller
@@ -53,12 +52,12 @@ class UserController extends Controller
         $email = $request['email'];
         $user = User::where('email', $email)->first();
         $reset = PasswordReset::where('email', $email)->first();
-        if ($reset && $reset->created_at->copy()->addHours(2)->isPast()) {
+        if ($reset && $reset->created_at->copy()->addSeconds(2)->isPast()) {
             $reset->delete();
             $reset = false;
         }
         if (!$reset) {
-            $token = Str::random(32);
+            $token = md5($user->id.time());
             $reset = new PasswordReset();
             $reset->fill([
                 'user_id' => $user->id,
