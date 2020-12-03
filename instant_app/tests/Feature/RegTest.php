@@ -35,7 +35,7 @@ class RegTest extends TestCase
             ->assertJsonStructure(['token']);
 
         $this->json('POST', 'api/auth', $dataAuth, $headers)
-            ->assertStatus(201)
+            ->assertStatus(200)
             ->assertJsonStructure(['token']);
     }
 }

@@ -20,6 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/users', [UserController::class, 'store']);
+Route::middleware('auth:api')->get('/users/{user}', [UserController::class, 'show']);
+Route::middleware('auth:api')->get('/users/', [UserController::class, 'index']);
+
 Route::post('/auth', [UserController::class, 'authUser']);
 
 Route::post('/forgot', [UserController::class, 'passwordForgot']);
