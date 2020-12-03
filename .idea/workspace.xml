@@ -27,9 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/tests/Feature/GetUsersTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/tests/Feature/GetUsersTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/tests/Feature/GetUserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/tests/Feature/GetUserTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606826687618</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Small fixes">
+      <created>1606999639574</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1606999639574</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,10 +399,10 @@
     <MESSAGE value="Added Auth method to get User object and tests to it" />
     <MESSAGE value="Auth method was moved to Controller + small fixes" />
     <MESSAGE value="Added passwordForgot and passwordReset methods to UserController, sending mails with token to user's email" />
-    <MESSAGE value="Small fixes" />
     <MESSAGE value="Small fix to prevent possible error with getting similar tokens" />
     <MESSAGE value="Small fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fix" />
+    <MESSAGE value="Small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="559" y="118" width="534" height="706" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606481860494">
@@ -426,10 +431,10 @@
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="486" y="218" width="399" height="156" key="NewPhpFileDialog/72.27.1528.873@72.27.1528.873" timestamp="1606754507025" />
-    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606826697422">
+    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606999648082">
       <screen x="60" y="27" width="1540" height="873" />
     </state>
-    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/60.27.1540.873@60.27.1540.873" timestamp="1606826697422" />
+    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/60.27.1540.873@60.27.1540.873" timestamp="1606999648082" />
     <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1528.873@72.27.1528.873" timestamp="1606816232173" />
     <state x="617" y="378" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606401624006">
       <screen x="72" y="27" width="1528" height="873" />
