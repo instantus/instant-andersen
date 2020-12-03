@@ -27,7 +27,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/tests/Feature/GetUserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/tests/Feature/GetUserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Services/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +49,11 @@
     </option>
   </component>
   <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="REBASE" />
+      </set>
+    </option>
     <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
@@ -77,7 +85,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="update-user" />
+        <entry key="$PROJECT_DIR$" value="getUsers" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -217,17 +225,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
-    <configuration name="GetUsersTest.testIndex" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\GetUsersTest" file="$PROJECT_DIR$/instant_app/tests/Feature/GetUsersTest.php" method="testIndex" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.GetUsersTest.testIndex" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -253,7 +250,7 @@
       <workItem from="1606821804595" duration="3366000" />
       <workItem from="1606833612696" duration="245000" />
       <workItem from="1606834212998" duration="4089000" />
-      <workItem from="1606980044235" duration="10237000" />
+      <workItem from="1606980044235" duration="15282000" />
     </task>
     <task id="LOCAL-00001" summary="added user registration using API">
       <created>1606295286375</created>
@@ -353,12 +350,12 @@
       <option name="project" value="LOCAL" />
       <updated>1606826687618</updated>
     </task>
-    <task id="LOCAL-00015" summary="Small fixes">
-      <created>1606999639574</created>
+    <task id="LOCAL-00015" summary="Added getUsers method and route to get a list of all registered users or one specific authorized user + tests">
+      <created>1606990438102</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1606999639574</updated>
+      <updated>1606990438102</updated>
     </task>
     <option name="localTasksCounter" value="16" />
     <servers />
@@ -399,20 +396,21 @@
     <MESSAGE value="Added Auth method to get User object and tests to it" />
     <MESSAGE value="Auth method was moved to Controller + small fixes" />
     <MESSAGE value="Added passwordForgot and passwordReset methods to UserController, sending mails with token to user's email" />
+    <MESSAGE value="Small fixes" />
     <MESSAGE value="Small fix to prevent possible error with getting similar tokens" />
     <MESSAGE value="Small fix" />
-    <MESSAGE value="Small fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fixes" />
+    <MESSAGE value="Added getUsers method and route to get a list of all registered users or one specific authorized user + tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getUsers method and route to get a list of all registered users or one specific authorized user + tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="559" y="118" width="534" height="706" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606481860494">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="559" y="118" width="534" height="706" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1528.873@72.27.1528.873" timestamp="1606481860494" />
-    <state x="561" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606998664095">
+    <state x="561" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607004080872">
       <screen x="60" y="27" width="1540" height="873" />
     </state>
-    <state x="561" y="221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/60.27.1540.873@60.27.1540.873" timestamp="1606998664095" />
+    <state x="561" y="221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/60.27.1540.873@60.27.1540.873" timestamp="1607004080872" />
     <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1528.873@72.27.1528.873" timestamp="1606481284310" />
     <state x="627" y="384" width="417" height="165" key="Github.CreateGistDialog" timestamp="1606204588660">
       <screen x="72" y="27" width="1528" height="873" />
@@ -422,19 +420,19 @@
       <screen x="60" y="27" width="1540" height="873" />
     </state>
     <state x="413" y="209" width="824" height="515" key="IDE.errors.dialog/60.27.1540.873@60.27.1540.873" timestamp="1606834552176" />
-    <state x="477" y="183" width="633" height="568" key="NewPhpClassDialog" timestamp="1606996927535">
+    <state x="477" y="183" width="665" height="568" key="NewPhpClassDialog" timestamp="1607004415897">
       <screen x="60" y="27" width="1540" height="873" />
     </state>
-    <state x="477" y="183" width="633" height="568" key="NewPhpClassDialog/60.27.1540.873@60.27.1540.873" timestamp="1606996927535" />
+    <state x="477" y="183" width="665" height="568" key="NewPhpClassDialog/60.27.1540.873@60.27.1540.873" timestamp="1607004415897" />
     <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog/72.27.1528.873@72.27.1528.873" timestamp="1606808049166" />
     <state x="486" y="218" width="399" height="156" key="NewPhpFileDialog" timestamp="1606754507025">
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="486" y="218" width="399" height="156" key="NewPhpFileDialog/72.27.1528.873@72.27.1528.873" timestamp="1606754507025" />
-    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606999648082">
+    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606990464541">
       <screen x="60" y="27" width="1540" height="873" />
     </state>
-    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/60.27.1540.873@60.27.1540.873" timestamp="1606999648082" />
+    <state x="422" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/60.27.1540.873@60.27.1540.873" timestamp="1606990464541" />
     <state x="431" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1528.873@72.27.1528.873" timestamp="1606816232173" />
     <state x="617" y="378" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606401624006">
       <screen x="72" y="27" width="1528" height="873" />
@@ -444,6 +442,10 @@
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="549" y="364" width="700" height="266" key="git4idea.remote.GitConfigureRemotesDialog/72.27.1528.873@72.27.1528.873" timestamp="1606377837629" />
+    <state x="568" y="311" width="513" height="312" key="git4idea.ui.GitUnstashDialog" timestamp="1607001774674">
+      <screen x="60" y="27" width="1540" height="873" />
+    </state>
+    <state x="568" y="311" width="513" height="312" key="git4idea.ui.GitUnstashDialog/60.27.1540.873@60.27.1540.873" timestamp="1607001774674" />
     <state x="500" y="207" key="run.anything.popup" timestamp="1606229158552">
       <screen x="72" y="27" width="1528" height="873" />
     </state>

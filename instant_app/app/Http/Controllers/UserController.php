@@ -8,6 +8,7 @@ use App\Http\Requests\AuthUserApiRequest;
 use App\Http\Requests\PasswordForgotRequest;
 use App\Http\Requests\PasswordResetRequest;
 use App\Http\Requests\StoreApiRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\Models\PasswordReset;
 use App\Models\User;
 use App\Services\UserService;
@@ -36,6 +37,19 @@ class UserController extends Controller
         $user = $this->userService->createUser($data);
         $token = $user->createToken('AuthToken')->accessToken;
         return response(["token" => $token], 201);
+    }
+
+    public function updateUser(UpdateUserRequest $request, User $user) {
+        if (Gate::allows('update-user', $user)) {
+            $data = [
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $request->password
+            ];
+            $result = $this->userService->updateUser($data, $user);
+            return response($result, 200);
+        }
+        return response(['message' => 'You have no rights for this action'], 403);
     }
 
     public function authUser(AuthUserApiRequest $request) {

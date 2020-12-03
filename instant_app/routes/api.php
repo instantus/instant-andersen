@@ -22,6 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/users', [UserController::class, 'store']);
 Route::middleware('auth:api')->get('/users/{user}', [UserController::class, 'show']);
 Route::middleware('auth:api')->get('/users/', [UserController::class, 'index']);
+Route::middleware('auth:api')->put('/users/{user}', [UserController::class, 'updateUser']);
 
 Route::post('/auth', [UserController::class, 'authUser']);
 
