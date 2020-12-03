@@ -94,14 +94,15 @@ class UserController extends Controller
         return response(['response' => 'Password was successfully changed'], 200);
     }
 
-    public function getUsers(User $user) {
-        if ($user->id === null) {
-            $collection = collect(User::all());
-            return response(['users' => $collection->pluck('email')], 200);
-        }
+    public function index() {
+        $collection = collect(User::all());
+        return response(['users' => $collection->pluck('email')], 200);
+    }
+
+    public function show(User $user) {
         if (Gate::allows('view-user', $user)) {
             return response(new UserResource($user), 200);
         }
-        return response(['message' => 'You have no rights for this action'], 403);
+        return response(['Error' => 'You have no rights for this action'], 403);
     }
 }

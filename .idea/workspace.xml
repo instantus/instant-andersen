@@ -28,10 +28,8 @@
     <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instant_app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/tests/Feature/RegTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/tests/Feature/RegTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/tests/Feature/GetUsersTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/tests/Feature/GetUsersTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +79,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="password-reset" />
+        <entry key="$PROJECT_DIR$" value="update-user" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -220,6 +218,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GetUsersTest.testIndex" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\GetUsersTest" file="$PROJECT_DIR$/instant_app/tests/Feature/GetUsersTest.php" method="testIndex" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.GetUsersTest.testIndex" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -395,9 +404,10 @@
       <screen x="72" y="27" width="1528" height="873" />
     </state>
     <state x="559" y="118" width="534" height="706" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1528.873@72.27.1528.873" timestamp="1606481860494" />
-    <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606481284310">
-      <screen x="72" y="27" width="1528" height="873" />
+    <state x="561" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606998664095">
+      <screen x="60" y="27" width="1540" height="873" />
     </state>
+    <state x="561" y="221" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/60.27.1540.873@60.27.1540.873" timestamp="1606998664095" />
     <state x="569" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1528.873@72.27.1528.873" timestamp="1606481284310" />
     <state x="627" y="384" width="417" height="165" key="Github.CreateGistDialog" timestamp="1606204588660">
       <screen x="72" y="27" width="1528" height="873" />
@@ -407,10 +417,10 @@
       <screen x="60" y="27" width="1540" height="873" />
     </state>
     <state x="413" y="209" width="824" height="515" key="IDE.errors.dialog/60.27.1540.873@60.27.1540.873" timestamp="1606834552176" />
-    <state x="477" y="183" width="633" height="568" key="NewPhpClassDialog" timestamp="1606987763315">
+    <state x="477" y="183" width="633" height="568" key="NewPhpClassDialog" timestamp="1606996927535">
       <screen x="60" y="27" width="1540" height="873" />
     </state>
-    <state x="477" y="183" width="633" height="568" key="NewPhpClassDialog/60.27.1540.873@60.27.1540.873" timestamp="1606987763315" />
+    <state x="477" y="183" width="633" height="568" key="NewPhpClassDialog/60.27.1540.873@60.27.1540.873" timestamp="1606996927535" />
     <state x="486" y="183" width="689" height="568" key="NewPhpClassDialog/72.27.1528.873@72.27.1528.873" timestamp="1606808049166" />
     <state x="486" y="218" width="399" height="156" key="NewPhpFileDialog" timestamp="1606754507025">
       <screen x="72" y="27" width="1528" height="873" />

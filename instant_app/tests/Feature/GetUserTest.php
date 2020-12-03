@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Artisan;
 use Laravel\Passport\Passport;
 use Tests\TestCase;
 
-class GetUsersTest extends TestCase
+class GetUserTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -18,12 +18,15 @@ class GetUsersTest extends TestCase
         Artisan::call('passport:install');
     }
 
-    public function testIndex()
+    public function testShow()
     {
+        User::factory()->count(2)->create();
         $user = User::factory()->make();
         Passport::actingAs($user);
 
-        $this->json('GET', 'api/users')
-            ->assertStatus(200)->assertJsonStructure(['users']);
+        $this->json('GET', 'api/users/1')
+            ->assertStatus(403);
+        $this->json('GET', 'api/users/'.$user->id)
+            ->assertStatus(200);
     }
 }
