@@ -11,8 +11,10 @@ use App\Http\Requests\StoreApiRequest;
 use App\Models\PasswordReset;
 use App\Models\User;
 use App\Services\UserService;
+use App\Http\Resources\User as UserResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
 
 
@@ -90,5 +92,16 @@ class UserController extends Controller
         $reset->delete();
 
         return response(['response' => 'Password was successfully changed'], 200);
+    }
+
+    public function getUsers(User $user) {
+        if ($user->id === null) {
+            $collection = collect(User::all());
+            return response(['users' => $collection->pluck('email')], 200);
+        }
+        if (Gate::allows('view-user', $user)) {
+            return response(new UserResource($user), 200);
+        }
+        return response(['message' => 'You have no rights for this action'], 403);
     }
 }
