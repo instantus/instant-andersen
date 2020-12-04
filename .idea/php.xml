@@ -119,6 +119,14 @@
       <path value="$PROJECT_DIR$/instant_app/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/instant_app/vendor/league/oauth2-server" />
       <path value="$PROJECT_DIR$/instant_app/vendor/league/event" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/instant_app/vendor/doctrine/dbal" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

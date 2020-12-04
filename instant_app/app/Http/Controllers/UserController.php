@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
-
+use PDF;
 
 class UserController extends Controller
 {
@@ -48,6 +48,19 @@ class UserController extends Controller
             ];
             $result = $this->userService->updateUser($data, $user);
             return response($result, 200);
+        }
+        return response(['message' => 'You have no rights for this action'], 403);
+    }
+
+    public function deleteUser(User $user) {
+        if (Gate::allows('delete-user', $user)) {
+            $user->fill(['status' => $user::INACTIVE]);
+            $user->save();
+
+            $pdf = PDF::loadView('emails.pdf.pdf', $user);
+            Mail::to($user->email)->send(new \App\Mail\AccountInactive($user->name, $pdf));
+
+            return response('', 204);
         }
         return response(['message' => 'You have no rights for this action'], 403);
     }

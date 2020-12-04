@@ -23,6 +23,7 @@ Route::post('/users', [UserController::class, 'store']);
 Route::middleware('auth:api')->get('/users/{user}', [UserController::class, 'show']);
 Route::middleware('auth:api')->get('/users/', [UserController::class, 'index']);
 Route::middleware('auth:api')->put('/users/{user}', [UserController::class, 'updateUser']);
+Route::middleware('auth:api')->delete('/users/{user}', [UserController::class, 'deleteUser']);
 
 Route::post('/auth', [UserController::class, 'authUser']);
 
