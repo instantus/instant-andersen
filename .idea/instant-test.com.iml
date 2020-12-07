@@ -125,6 +125,14 @@
       <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/barryvdh/laravel-dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/dompdf/dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/sabberworm/php-css-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/phenx/php-svg-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/phenx/php-font-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/instant_app/vendor/doctrine/dbal" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
