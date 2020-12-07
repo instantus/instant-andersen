@@ -31,6 +31,6 @@ class AccountInactive extends Mailable
     public function build()
     {
         return $this->markdown('emails.user.pdf')
-            ->attachData($this->pdf->output(), 'test.pdf', ['mime' => 'application/pdf']);
+            ->attachData($this->pdf->output(), 'Account_status_Laravel.pdf', ['mime' => 'application/pdf']);
     }
 }

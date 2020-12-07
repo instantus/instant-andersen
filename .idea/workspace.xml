@@ -25,17 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Small fix">
-      <change beforePath="$PROJECT_DIR$/.idea/instant-test.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/instant-test.com.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="a8381135-0629-416d-af8d-c01aa2faae17" name="Default Changelist" comment="Added delete user endpoint and method in controller. Added an option to send email to user with attached pdf file. Added tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instant_app/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/app/Mail/AccountInactive.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/app/Mail/AccountInactive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instant_app/resources/views/emails/pdf/pdf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/instant_app/resources/views/emails/pdf/pdf.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +267,9 @@
       <workItem from="1606833612696" duration="245000" />
       <workItem from="1606834212998" duration="4089000" />
       <workItem from="1606980044235" duration="15282000" />
-      <workItem from="1607066027159" duration="8860000" />
+      <workItem from="1607066027159" duration="9143000" />
+      <workItem from="1607083217880" duration="157000" />
+      <workItem from="1607324036137" duration="2041000" />
     </task>
     <task id="LOCAL-00001" summary="added user registration using API">
       <created>1606295286375</created>
@@ -395,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607009952192</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added delete user endpoint and method in controller. Added an option to send email to user with attached pdf file. Added tests">
+      <created>1607083076512</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607083076512</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,6 +441,7 @@
     <MESSAGE value="Added getUsers method and route to get a list of all registered users or one specific authorized user + tests" />
     <MESSAGE value="Added Update method to UserController and Service. Added route and tests" />
     <MESSAGE value="Small fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fix" />
+    <MESSAGE value="Added delete user endpoint and method in controller. Added an option to send email to user with attached pdf file. Added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added delete user endpoint and method in controller. Added an option to send email to user with attached pdf file. Added tests" />
   </component>
 </project>
